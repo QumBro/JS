@@ -8,10 +8,10 @@ let add = (inputKey, inputValue, obj) => {
     console.log(obj);
 }
 
-let validate = (() => {
+let validate = ((inputKey) => {
     if (inputKey in obj) {
         alert('Уже имеется');
-        return 0;
+        return;
     } else {
         let inputValue = prompt('Введите значение');
         add(inputKey, inputValue, obj);
