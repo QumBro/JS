@@ -5,11 +5,11 @@ const juju = {
 };
 
 function lol(...arg) {
-    return arg;
+    return { array: this, arg: arg };
 }
 
 function bindFunc(fun, context, ...arg) {
-    return fun.call(this, context, ...arg);
+    return fun.bind(context, ...arg)();
 }
 
 const newContex = bindFunc(lol, juju, 1, 2, 3, 4);

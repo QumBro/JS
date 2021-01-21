@@ -4,14 +4,17 @@ const valObject0 = {
 
 
 function getNewArray() {
-    if (this.values === undefined) {
+    if (this.values) {
         let arr = this.values.filter((element) => {
-            if ((element > 2 && element < 10) && element % 2 == 0 && element === "number")
+            if ((element > 2 && element < 10) && element % 2 == 0 && typeof element === "number")
                 return element;
         });
         console.log(arr);
+    } else {
+        console.log("Не найдено");
     }
-    console.log("Ну найдено");
+
 };
 
-const result = getNewArray(); 
+valObject0.getNewArray = getNewArray;
+valObject0.getNewArray(); 
