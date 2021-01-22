@@ -18,7 +18,6 @@ const person = {
         ageValidation(age);
         function ageValidation(age) {
             if (age > 18) {
-                this.age = age;
                 console.log('age: ', age);
             } else {
                 age = "Validation Error";
@@ -32,7 +31,7 @@ const person = {
 
 const person1 = {
     name: "Rimuru",
-    age: 10,
+    age: 19,
     __proto__: person
 };
 
