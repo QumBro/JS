@@ -15,14 +15,17 @@ const person = {
     },
 
     setAge(age) {
-        ageValidation(age);
-        function ageValidation(age) {
-            if (age > 18) {
-                console.log('age: ', age);
-            } else {
-                age = "Validation Error";
-                console.log('age: ', age);
-            }
+        this.age = this.ageValidation(age);
+    },
+
+
+    ageValidation(age) {
+        let age1;
+        if (age >= 18) {
+            return age;
+        } else {
+            age1 = "Validation Error";
+            return age1;
         }
     }
 
@@ -39,5 +42,5 @@ const person1 = {
 person1.getName();
 person1.setName();
 
-person1.getAge();
 person1.setAge(person1.age);
+person1.getAge();
