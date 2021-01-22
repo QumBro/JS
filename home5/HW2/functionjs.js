@@ -4,10 +4,13 @@ const namesOfDays = {
 }
 
 function getNameOfDay(lang, datNumber) {
-    for (const key in namesOfDays) {
-        if (key === lang) {
-            console.log(namesOfDays[key][datNumber - 1]);
+    if (Object.keys(namesOfDays).includes(lang)) {
+        if (!namesOfDays[lang][datNumber - 1]) {
+            return console.log('Такого значения не существует');
         }
+        console.log(namesOfDays[lang][datNumber - 1]);
+    } else {
+        console.log(`Параметр ${lang} задан не верно`);
     }
 }
 

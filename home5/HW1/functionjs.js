@@ -15,11 +15,11 @@ const citiesAndCountries = {
 }*/
 
 let getCity = () => {
-    let array = [];
-    Object.entries(citiesAndCountries).map(([key, value]) => {
-        array.push(`${key} - это ${value}`);
+    let array = Object.entries(citiesAndCountries).map(([key, value]) => {
+        return (`${key} - это ${value}`);
     })
-    console.log(array);
+    return array;
 }
 
 const result = getCity();
+console.log(result);
